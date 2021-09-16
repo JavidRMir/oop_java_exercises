@@ -2,6 +2,10 @@ package com.techreturners.cats;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 public class CatTest {
@@ -55,7 +59,9 @@ public class CatTest {
 
     @Test
     public void feedTheCat() {
-        assertEquals("Purrrrrrr", domesticCat.eat());
+        assertThat(domesticCat.eat(), anyOf(containsString("Purrrrrrr"),
+                containsString("It will do I suppose")));
     }
+
 
 }
