@@ -2,16 +2,11 @@ package com.techreturners.cats;
 
 interface Cat {
 
-    public void goToSleep();
-    public void wakeUp();
+    void goToSleep();
+    void wakeUp();
 
-    default public String eat() {
-        // implementing classes can override
-        return "";
-    }
-
-    default public void run() {
-        // implementing classes can override
+    default String run() {
+        return "I run really fast";
     }
 
 }

@@ -27,6 +27,8 @@ public abstract class Felis implements Cat {
     }
 
 
+    public abstract String eat();
+
     @Override
     public void goToSleep() {
         this.isSleeping = true;
