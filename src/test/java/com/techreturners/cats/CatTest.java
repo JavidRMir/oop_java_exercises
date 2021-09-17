@@ -59,8 +59,12 @@ public class CatTest {
 
     @Test
     public void feedTheCat() {
-        assertThat(domesticCat.eat(), anyOf(containsString("Purrrrrrr"),
-                containsString("It will do I suppose")));
+        // anyOf(containsString("value")) checks if expected value is contained in actual value
+//        assertThat(domesticCat.eat(), anyOf(containsString("Purrrrrrr"),
+//                containsString("It will do I suppose")));
+
+        // But herein we want to match the actual whole expected string/value with the whole actual value
+        assertThat(domesticCat.eat(), anyOf(is("Purrrrrrr"), is("It will do I suppose")));
     }
 
 
